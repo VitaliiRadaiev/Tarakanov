@@ -1,0 +1,242 @@
+@import "../icomoon/style";
+
+html {
+	box-sizing: border-box;
+	height: 100%;
+
+}
+*,*::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: "PT Sans", sans-serif;
+	min-width: 320px;
+	position: relative;
+	background: #fff;
+	max-width: 3000px;
+	margin: auto;
+	height: 100%;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.content-title {
+	letter-spacing: 1.5px;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 1.1;
+	color: #6f6f6f;
+}
+
+.container-width {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 2px 12px;
+	margin-bottom: 0;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.temporaryBlock {
+	height: 500px;
+	background: #c4c4c4;
+}
+
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:  rgba(0,0,0, 0.6);
+	z-index: 50;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.2s ease 0s;
+
+	&.open {
+		opacity: 1;
+		visibility: visible;
+
+		& .popup_content {
+			transform: translateY(0px);
+			opacity: 1;
+		}
+	}
+
+	&_body {
+		min-height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		padding: 15px 30px;
+	}
+
+	&_content {
+		background: #fff;
+		padding:15px;
+		max-width: 333px;
+		position: relative;
+		width: 100%;
+		transition: all 0.2s ease 0s;
+		opacity: 0;
+		transform: translateY(-100%);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+		border: 1px solid rgba(0, 0, 0, .2);
+		border-radius: 6px;
+		outline: 0;
+		text-align: center;
+	}
+
+	&_title {
+		margin-top: 0;
+		color: #333;
+	    margin-bottom: 16px;
+	    font-weight: bold;
+	    font-size: 21px;
+	}
+
+	&_form {
+
+		&_input-wrap {
+			position: relative;
+			margin-bottom: 30px;
+
+			& > span {
+				position: absolute;
+				top: 20px;
+				font-size: 18px;
+				line-height: 18px;
+				left: 20px;
+				color: #f3cc29;
+			}
+		}
+
+		&_input {
+			width: 100%;
+			height: 55px;
+			border-radius: 0;
+			font-size: 15px;
+			border: 1px solid #ddd;
+			box-shadow: none;
+			padding: 0 50px;
+			outline: none;
+
+			&:focus {
+				border-color: #f3cc29;
+			}
+		}
+
+		&_input-btn-wrap {
+			margin-top: 30px;
+		}
+
+		&_input-btn {
+			color: #313E4D;
+		    font-size: 14px;
+		    border: none;
+		    border-radius: 0;
+		    padding: 15px 45px;
+		    background-color: #efbb20;
+		    text-transform: uppercase;
+		    border: 1px solid transparent;
+		    outline: none;
+		    cursor: pointer;
+		}
+	}
+
+}
+
+.geoPopup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color:  rgba(0,0,0, 0.6);
+	z-index: 50;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: all 0.2s ease 0s;
+
+	& .popup_content {
+		max-width: 598px;
+		padding: 20px;
+		text-align: left;
+	}
+
+	&_title {
+		margin-top: 0;
+		color: #333;
+	    margin-bottom: 16px;
+	    font-weight: bold;
+	    font-size: 24px;
+	    letter-spacing: 1.5px;
+
+	}
+
+	&-inner {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&_list {
+		width: 33.33%;
+		padding: 0 15px;
+		min-width: 140px;
+		margin-bottom: 10px;
+		&_item {
+			
+			& > a {
+				color: #337ab7;
+				transition: all .2s ease;
+				font-size: 14px;
+
+				&:hover {
+					color: #efbb20;
+				}
+			}
+		}
+	}
+
+}
+
