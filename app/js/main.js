@@ -181,6 +181,11 @@ $(document).ready(function(){
 	    popupClose(popupActive);
 	});
 
+	geoPopup.addEventListener('swiped-right', function(e) {
+	    const popupActive = document.querySelector('.popup.open');
+	    popupClose(popupActive);
+	});
+
 	// === Polyfill ===
 		(function() {
 			if(!Element.prototype.closest) {
