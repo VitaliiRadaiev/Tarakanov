@@ -479,7 +479,22 @@
 				margin-bottom: 15px;
 			}
 		}
-	// ==== AND QUESTION ====	
+	// ==== AND QUESTION ====
+
+	.popup {
+
+		&_content {
+			transform: translateY(0) translateX(100%);
+		}
+
+		&.open {
+
+			& .popup_content {
+				transform: translateX(0%);
+			}
+		}
+
+	}	
 
 	.geoPopup_title {
 		font-size: 18px;

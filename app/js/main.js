@@ -169,12 +169,17 @@ $(document).ready(function(){
 		}, timeout);
 	}
 
-	// document.addEventListener('keydown', function(e) {
-	// 	if(e.which === 27) {
-	// 		const popupActive = document.querySelector('.popup.open');
-	// 		popupClose(popupActive);
-	// 	}
-	// });
+	document.addEventListener('keydown', function(e) {
+		if(e.which === 27) {
+			const popupActive = document.querySelector('.popup.open');
+			popupClose(popupActive);
+		}
+	});
+
+	popup.addEventListener('swiped-right', function(e) {
+	    const popupActive = document.querySelector('.popup.open');
+	    popupClose(popupActive);
+	});
 
 	// === Polyfill ===
 		(function() {
@@ -201,6 +206,7 @@ $(document).ready(function(){
 	// === AND Polyfill ===
 
 	// ==== AND Popup form handler ====
+
 
 	// ==== reCaptcha ====
 		document.getElementById('popupForm').onsubmit = function () {

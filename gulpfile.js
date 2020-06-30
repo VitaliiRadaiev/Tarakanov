@@ -48,6 +48,7 @@ gulp.task('js', function(){
   return gulp.src([
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/wow.js/dist/wow.js',
+    './swiped-events.min.js',
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
