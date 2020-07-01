@@ -155,6 +155,7 @@
 			&_box-img {
 				width: 100%;
 				justify-content: flex-start;
+				padding-right: 0;
 			}
 		}
 
@@ -171,6 +172,7 @@
 			&_box-text {
 				width: 100%;
 				margin-left: 0;
+				padding-left: 0;
 			}
 
 			&_box-img {
@@ -312,12 +314,20 @@
 		}
 
 
-	// ==== AND INDEPENDENT ====					
+	// ==== AND INDEPENDENT ====	
+
+
+	// ==== QUESTIONS ==== 
+		.questions_list {
+			padding-right: 0;
+		}
+	// ==== AND QUESTIONS ====					
 }
 
 @media (max-width: 609px) {
 	.features_item-wrap {
 		width: 100%;
+		margin-bottom: 30px;
 	}
 }
 
